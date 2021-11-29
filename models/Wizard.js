@@ -43,6 +43,7 @@ const wizardSchema = new Schema({
     stamina: { type: Number, default: 10, min: 0 },
     magic: { type: Number, default: 100, min: 0 },
   },
+  spells: [{ type: Schema.Types.ObjectId, ref: "MagicSpell" }],
 });
 
 const Wizard = model("Wizard", wizardSchema);

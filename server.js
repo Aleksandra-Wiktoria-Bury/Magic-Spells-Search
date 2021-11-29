@@ -1,21 +1,31 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
-const magicspellRouter = require('./routes/magicspell');
-
-const app = express();
+const express = require("express");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const cors = require('cors');
 
 dotenv.config();
+const app = express();
 
-app.use('/magic-spell', magicspellRouter);
 
-console.log('Casting Mongoose database connection spell... 🪄')
-
+//* ------- database connect
 mongoose
-    .connect(
-        `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true }
-    )
-    .then(() => console.log('The spell was a success! Database connected! 😍'))
-    .catch(() => console.log('Casting spell failed! Database is not connected! ☹️'));
+  .connect(
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
+  )
+  .then(() => console.log("Database connected! 😍"))
+  .catch((error) => {
+    console.log("Database is not connected! ☹️");
+    console.log(error);
+  });
 
-app.listen(3001, () => console.log('The server wizard is listening... 🧙'));
+//* ------- middleware
+app.use(express.json());
+app.use(cors());
+
+//* ------- routes
+const magicspellRouter = require("./routes/magicspell");
+app.use("/magic-spell", magicspellRouter);
+const wizardRouter = require("./routes/wizard");
+app.use("/wizard", wizardRouter);
+
+app.listen(3001, () => console.log("The server wizard is listening... 🧙"));
