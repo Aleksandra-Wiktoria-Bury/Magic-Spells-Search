@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Gandalf",
+    "description": "The oldest wizard",
+    "age": 203,
+    "origin": "The Wyrmberg",
+    "level": 20,
+    "energy": {
+      "health": 1,
+      "stamina": 40,
+      "magic": 5343
+    },
+    "accuracy": 0.9,
+    "critical": 0.4
+  },
+  {
+    "name": "Rincewind",
+    "description": "The only wizard to fail at being a wizard",
+    "age": 56,
+    "origin": "Ankh-Morpork",
+    "level": 1,
+    "energy": {
+      "health": 1,
+      "stamina": 70,
+      "magic": 100
+    },
+    "accuracy": 0.4,
+    "critical": 0
+  },
+  {
+    "name": "Tiffany Aching",
+    "description": "Her favourite weapon is a large frying pan",
+    "age": 9,
+    "origin": "The Chalk",
+    "level": 12,
+    "energy": {
+      "health": 1,
+      "stamina": 120,
+      "magic": 100
+    },
+    "accuracy": 0.7,
+    "critical": 0
+  }
+]
