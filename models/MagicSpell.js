@@ -12,8 +12,9 @@ const magicSpellSchema = new Schema({
   school: {
     type: String,
     enum: ["physical", "arcane", "fire", "frost", "nature", "shadow", "holy"],
+     required: true
   },
-  required: true,
+ 
 });
 
 const MagicSpell = model("MagicSpell", magicSpellSchema);
