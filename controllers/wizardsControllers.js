@@ -14,7 +14,7 @@ const create = async (req, res) => {
 
 //* ------ searches
 const getAll = async (req, res) => {
-  const searchResult = await Wizards.find({});
+  const searchResult = await Wizards.find({}).populate("spells");
 
   res.status(200).json({ message: "Wizard found!", wizard: searchResult });
 };
