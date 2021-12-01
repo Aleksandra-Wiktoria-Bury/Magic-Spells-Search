@@ -38,8 +38,20 @@ const getById = async (req, res) => {
   }
 };
 
+const list = async (req, res) => {
+  const search = req.query["search"]
+  const data = await Spells.find()
+    .sort( {[search] : 1, level: 1, cost: 1})
+    .limit(Number(req.query["limit"]) || 10)
+    .skip(Number(req.query["skip"]) || 0)
+    .lean();
+
+  res.status(200).send(data);
+};
+
 module.exports = {
   create,
   magicSchools,
-  getById
+  getById,
+  list
 };

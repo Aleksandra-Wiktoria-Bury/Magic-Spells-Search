@@ -7,7 +7,6 @@ router.post("/create", controllers.create);
 
 //Task 17 - Create an endpoint to return all wizard origins
 router.get("/origins", controllers.origins);
-
 //Task 20 - Adding spells to a wizard
 router.get("/details", controllers.getById);
 //Task 21 - Adding spells to a wizard

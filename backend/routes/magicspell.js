@@ -11,4 +11,7 @@ router.get('/schools', controllers.magicSchools)
 //Task 19 - Create a route to read a spell
 router.get('/details', controllers.getById)
 
+router.get('/list', controllers.list)
+
+
 module.exports = router;
