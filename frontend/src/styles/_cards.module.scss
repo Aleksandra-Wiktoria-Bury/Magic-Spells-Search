@@ -1,0 +1,8 @@
+@import "./variables";
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+}

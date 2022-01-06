@@ -18,14 +18,12 @@ mongoose
     console.log(error);
   });
 
-//* ------- middleware
-app.use(express.json());
-app.use(cors());
+  app.use(cors());
 
-//* ------- routes
+
 const magicspellRouter = require("./routes/magicspell");
-app.use("/magic-spell", magicspellRouter);
 const wizardRouter = require("./routes/wizard");
+app.use("/magic-spell", magicspellRouter);
 app.use("/wizard", wizardRouter);
 
 app.listen(3001, () => console.log("The server wizard is listening... 🧙"));

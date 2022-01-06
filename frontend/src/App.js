@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './styles/main.module.scss'
 
 import SpellCards from "./components/SpellCards";
 import Landing from "./components/Landing";

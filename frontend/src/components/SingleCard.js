@@ -1,4 +1,4 @@
-//import styles from "./ProductClipping.module.css";
+import styles from "../styles/main.module.scss";
 
 export default function SingleCard({
   name,
@@ -8,17 +8,20 @@ export default function SingleCard({
   level,
   range,
   school,
-  i
-}, ) {
+  i,
+}) {
   return (
-    <div key={i} >
-      <p>{name} </p>
-      <p>cost: {cost} </p>
-      <p>damage: {damage} </p>
-      <p>description: {description} </p>
-      <p>level: {level} </p>
-      <p>range: {range} </p>
-      <p>school: {school} </p>
+    <div key={i} className={styles.card}>
+      <h2>{name}</h2>
+      <div className={styles[`${school}`]}>
+        <span>{school}</span>
+      </div>
+      <h4>level: {level} </h4>
+      <p>{description} </p>
+      <h4>
+        damage: {damage} | range: {range}{" "}
+      </h4>
+      <span>cost: {cost} </span>
     </div>
   );
 }
