@@ -38,15 +38,19 @@ const getById = async (req, res) => {
 };
 
 const list = async (req, res) => {
-  const search = req.query["search"];
+ 
+  const sort = req.query["sort"];
   const field = req.query["field"];
   const filter = req.query["filter"];
+  const docsFound = await Spells.find({[field] : filter})
   const data = await Spells.find({[field] : filter})
-    .sort(search ? { [search]: 1, level: 1, cost: 1 } : { school: 1 })
+    .sort(sort ? { [sort]: 1, level: 1, cost: 1 } : { school: 1 })
     .limit(Number(req.query["limit"]) || 10)
     .skip(Number(req.query["skip"]) || 0)
     .lean();
-  res.status(200).send(data);
+   
+   const maxNum= docsFound.length
+  return res.status(200).send({data, maxNum});
 };
 
 module.exports = {
