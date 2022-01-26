@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import styles from "../styles/main.module.scss";
 export default function Landing() {
   const navigate = useNavigate();
 
@@ -8,13 +8,13 @@ export default function Landing() {
   };
 
   return (
-    <>
-      <div >
+    
+      <div className={styles.container} >
         <h1>Discover the spells</h1>
         <button type="submit" onClick={handleSearch}>
-          teleport now
+        to the Spellbook
         </button>
       </div>
-    </>
+    
   );
 }

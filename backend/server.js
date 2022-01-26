@@ -19,6 +19,7 @@ mongoose
   });
 
   app.use(cors());
+app.use(express.json());
 
 
 const magicspellRouter = require("./routes/magicspell");
