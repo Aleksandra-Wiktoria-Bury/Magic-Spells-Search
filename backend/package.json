@@ -1,0 +1,27 @@
+{
+  "name": "db-subdocuments-references",
+  "version": "1.0.0",
+  "description": "This assignment will allow you to build a REST API for a magical wizard database!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FbW-E03/db-wizards-Aleksandra-Wiktoria-Bury.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FbW-E03/db-wizards-Aleksandra-Wiktoria-Bury/issues"
+  },
+  "homepage": "https://github.com/FbW-E03/db-wizards-Aleksandra-Wiktoria-Bury#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  }
+}

@@ -1,0 +1,87 @@
+@import "./variables";
+
+.form {
+  width: 330px;
+  margin-bottom: 1rem;
+  background-image: url("./images/parchment.jpg");
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    label {
+      padding: 0 0.5rem;
+    }
+    select {
+      width: 85px;
+      padding: 0.1rem 0.5rem;
+      font-family: "Sorts Mill Goudy", serif;
+      border-radius: 10px;
+      border: 0.5px solid rgb(168, 147, 23);
+      background-color: rgba(255, 252, 248, 0.678);
+      box-shadow: 0px 5px 10px -10px #52473f,
+        5px 5px 18px 5px rgba(70, 70, 70, 0.32);
+      &:hover {
+        box-shadow: 0px 10px 13px -7px #5f5e5e,
+          5px 5px 15px 5px rgba(95, 94, 94, 0.32);
+      }
+    }
+    button {
+      margin-top: 1.6rem;
+      color: #381f0c;
+    }
+  }
+}
+.cards {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 420px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 1rem;
+  p {
+    margin: 0 1rem;
+  }
+
+  color: rgb(36, 35, 34);
+  background-image: url("./images/parchment.jpg");
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
+}
+
+button {
+  background-color: rgba(255, 252, 248, 0.678);
+  font-family: "Sorts Mill Goudy", serif;
+  padding: 0.2rem 0.8rem;
+  height: 1.6rem;
+  line-height: 1.2rem;
+  border-radius: 10px;
+  border: 0.5px solid rgb(168, 147, 23);
+  box-shadow: 0px 5px 10px -10px #52473f,
+    5px 5px 18px 5px rgba(70, 70, 70, 0.32);
+  &:hover {
+    box-shadow: 0px 10px 13px -7px #5f5e5e,
+      5px 5px 15px 5px rgba(78, 38, 22, 0.438);
+  }
+}
